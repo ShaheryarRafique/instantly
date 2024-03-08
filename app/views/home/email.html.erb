@@ -1,0 +1,7 @@
+   <ul></ul>
+<% @emails.each do |email| %>
+   <%mailbox = email['To'][0] %>
+     <li><span><%= mailbox["Mailbox"] %></span>@<span><%= mailbox["Domain"] %></span>, <span><%=email['Content']['Headers']['Subject'].first %></span></li>
+   
+<% end %>
+</ul>
